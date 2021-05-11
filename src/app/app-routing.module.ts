@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {BooksComponent} from './books/books.component';
-import {AuthorComponent} from './books/author/author.component';
-import {PublisherComponent} from './books/publisher/publisher.component';
-import {GenreComponent} from './books/genre/genre.component';
+import {AuthorComponent} from './author/author.component';
+import {PublisherComponent} from './publisher/publisher.component';
+import {GenreComponent} from './genre/genre.component';
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
 import {LogoutComponent} from './logout/logout.component';
