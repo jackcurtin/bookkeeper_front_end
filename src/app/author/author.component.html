@@ -1,0 +1,21 @@
+<section>
+  <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
+  <button (click)="getAuthors()">Get All Authors</button>
+</section>
+
+<div *ngIf="authors">
+  <h4>All Authors</h4>
+  <ul>
+    <li *ngFor="let author of authors">
+      {{author.firstName}} -- {{author.lastName}}
+    </li>
+  </ul>
+</div>
+<h4>Create New Category</h4>
+<form (submit)="createAuthor()">
+  <input [(ngModel)]="firstName" name="authorFirstName" type="text" placeholder="FirstName" />
+  <input [(ngModel)]="lastName" name="authorLastName" type="text" placeholder="LastName" />
+  <input [(ngModel)]="age" name="authorAge" type="text" placeholder="Age" />
+  <input [(ngModel)]="nationality" name="authorNationality" type="text" placeholder="Nationality" />
+  <input type="submit"/>
+</form>
