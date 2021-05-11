@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./author.component.css']
 })
 export class AuthorComponent implements OnInit {
+
   public authors: [];
+
   constructor(private authorService: AuthorComponent) { }
+
   getAuthors(): any {
     this.authorService.getAuthors().subscribe(response => {
       this.authors = response;
