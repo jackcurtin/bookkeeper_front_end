@@ -13,6 +13,7 @@ import { GenreComponent } from './books/genre/genre.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     BooksComponent,
     AuthorComponent,
     PublisherComponent,
-    GenreComponent
+    GenreComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
