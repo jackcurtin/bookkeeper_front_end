@@ -22,6 +22,6 @@ export class AuthorService {
       }),
     };
     return this.http
-      .post(`${herokuUrl}/api/authors/add/`, newAuthor, requestOptions);
+      .post(`${herokuUrl}/api/authors/add`, newAuthor, requestOptions);
   }
 }
