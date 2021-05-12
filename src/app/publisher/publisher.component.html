@@ -1,20 +1,25 @@
-<section>
-  <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
-  <button (click)="getPublishers()">Get All Publishers</button>
-</section>
+<div class="page-grid">
+  <section>
+    <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
+    <button (click)="getPublishers()">Get All Publishers</button>
 
-<div *ngIf="publishers">
-  <h4>All Publishers</h4>
-  <ul>
-    <li *ngFor="let publisher of publishers">
-      {{publisher.name}} -- {{publisher.address}}
-      <p *ngFor = "let pubBook of publisher.bookList">{{pubBook}}</p>
-    </li>
-  </ul>
+
+    <div *ngIf="publishers">
+      <h4>All Publishers</h4>
+      <ul>
+        <li *ngFor="let publisher of publishers">
+          {{publisher.name}} -- {{publisher.address}}
+          <p *ngFor="let pubBook of publisher.bookList">{{pubBook}}</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <h4>Create New Publisher</h4>
+    <form (submit)="createPublisher()">
+      <input [(ngModel)]="name" name="name" type="text" placeholder="publisher name"/>
+      <input [(ngModel)]="address" name="address" type="text" placeholder="publisher address"/>
+      <input type="submit"/>
+    </form>
+  </section>
 </div>
-<h4>Create New Publisher</h4>
-<form (submit)="createPublisher()">
-  <input [(ngModel)]="name" name="name" type="text" placeholder="publisher name" />
-  <input [(ngModel)]="address" name="address" type="text" placeholder="publisher address" />
-  <input type="submit"/>
-</form>

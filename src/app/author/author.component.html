@@ -1,21 +1,29 @@
-<section>
-  <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
-  <button (click)="getAuthors()">Get All Authors</button>
-</section>
+<div class="page-grid">
+  <section>
+    <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
+    <button (click)="getAuthors()">Get All Authors</button>
 
-<div *ngIf="authors">
-  <h4>All Authors</h4>
-  <ul>
-    <li *ngFor="let author of authors">
-      {{author.firstName}} -- {{author.lastName}}
-    </li>
-  </ul>
+  <div *ngIf="authors">
+    <h4>All Authors</h4>
+    <ul>
+      <div class="listing" *ngFor="let author of authors">
+      <li>
+        <h2>{{author.firstName}} {{author.lastName}}</h2>
+        {{author.nationality}} <br>
+        {{author.age}}
+      </li>
+      </div>
+    </ul>
+  </div>
+  </section>
+  <section>
+    <h4>Create New Category</h4>
+    <form (submit)="createAuthor()">
+      <input [(ngModel)]="firstName" name="authorFirstName" type="text" placeholder="FirstName" />
+      <input [(ngModel)]="lastName" name="authorLastName" type="text" placeholder="LastName" />
+      <input [(ngModel)]="age" name="authorAge" type="text" placeholder="Age" />
+      <input [(ngModel)]="nationality" name="authorNationality" type="text" placeholder="Nationality" />
+      <input type="submit"/>
+    </form>
+  </section>
 </div>
-<h4>Create New Category</h4>
-<form (submit)="createAuthor()">
-  <input [(ngModel)]="firstName" name="authorFirstName" type="text" placeholder="FirstName" />
-  <input [(ngModel)]="lastName" name="authorLastName" type="text" placeholder="LastName" />
-  <input [(ngModel)]="age" name="authorAge" type="text" placeholder="Age" />
-  <input [(ngModel)]="nationality" name="authorNationality" type="text" placeholder="Nationality" />
-  <input type="submit"/>
-</form>

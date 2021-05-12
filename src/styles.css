@@ -5,13 +5,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 ul{
   list-style: none;
 }
+
 form{
   display: flex;
   flex-direction: column;
-  margin-top: 30%;
   background-color: lightgray;
   padding: 5%;
-  width: 100%;
+  width: 50%;
+  margin-left: 20%;
 }
 input, select{
   margin: 5%;
@@ -19,3 +20,18 @@ input, select{
 input:hover{
   background-color: lightskyblue;
 }
+.page-grid{
+  margin-top: 7%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 70vw 30vw;
+  text-align: center;
+}
+.listing{
+  background-color: lightskyblue;
+  width: auto;
+  margin: 2% 30%;
+  border-radius: 20px;
+  padding: 1%;
+}
+

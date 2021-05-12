@@ -1,19 +1,22 @@
-<section>
-  <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
-  <button (click)="getGenres()">Get All Genres</button>
-</section>
-
-<div *ngIf="genres">
-  <h4>All Genres</h4>
-  <ul>
-    <li *ngFor="let genre of genres">
-      {{genre.name}} -- {{genre.description}}
-    </li>
-  </ul>
+<div class="page-grid">
+  <section>
+    <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
+    <button (click)="getGenres()">Get All Genres</button>
+    <div *ngIf="genres">
+      <h4>All Genres</h4>
+      <ul>
+        <li *ngFor="let genre of genres">
+          {{genre.name}} -- {{genre.description}}
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <h4>Create New Genre</h4>
+    <form (submit)="createGenre()">
+      <input [(ngModel)]="name" name="name" type="text" placeholder="genre name"/>
+      <input [(ngModel)]="description" name="description" type="text" placeholder="genre description"/>
+      <input type="submit"/>
+    </form>
+  </section>
 </div>
-<h4>Create New Genre</h4>
-<form (submit)="createGenre()">
-  <input [(ngModel)]="name" name="name" type="text" placeholder="genre name" />
-  <input [(ngModel)]="description" name="description" type="text" placeholder="genre description" />
-  <input type="submit"/>
-</form>
