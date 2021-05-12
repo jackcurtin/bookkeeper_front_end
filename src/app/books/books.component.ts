@@ -47,6 +47,13 @@ export class BooksComponent implements OnInit {
     }, err => console.log(err));
   }
 
+  deleteBook(bookId): void{
+    this.bookService.deleteBook(bookId).subscribe(response => {
+      this.books = this.bookService.getBooks();
+      console.log(response);
+    });
+  }
+
   getAllAuthors(): any {
     this.authorService.getAuthors().subscribe(response => {
       this.allAuthors = response;
@@ -62,7 +69,6 @@ export class BooksComponent implements OnInit {
       this.allPublishers = response;
     }, err => console.log(err));
   }
-
 
   ngOnInit(): void {
     this.getAllAuthors();

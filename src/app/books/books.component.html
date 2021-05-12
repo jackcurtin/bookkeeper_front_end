@@ -11,14 +11,15 @@
       <h4>All Books</h4>
       <ul>
         <div class="listing" *ngFor="let book of books">
-        <li>
-          <h2>{{book.title}} </h2>
-          Synopsis: {{book.synopsis}} <br>
-          Page Count: {{book.pageCount}} <br>
-          Author: {{book.author.firstName}} {{book.author.lastName}} <br>
-          Genre: {{book.genre.name}} <br>
-          Publisher: {{book.publisher.name}}
-        </li>
+          <li>
+            <h2>{{book.title}} </h2>
+            Synopsis: {{book.synopsis}} <br>
+            Page Count: {{book.pageCount}} <br>
+            Author: {{book.author.firstName}} {{book.author.lastName}} <br>
+            Genre: {{book.genre.name}} <br>
+            Publisher: {{book.publisher.name}}
+          </li>
+          <button (click)="deleteBook(book.id)">Delete</button>
         </div>
       </ul>
     </div>

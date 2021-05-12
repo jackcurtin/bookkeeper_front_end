@@ -24,4 +24,15 @@ export class BookService {
     return this.http
       .post(`${herokuUrl}/api/books/add`, newBook, requestOptions);
   }
+  deleteBook(bookId): any {
+    console.log(`${bookId} is the book id`);
+    const token = localStorage.getItem('token');
+    const requestOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${token}`
+      }),
+    };
+    return this.http
+      .delete(`${herokuUrl}/api/books/delete/${bookId}`, requestOptions);
+  }
 }
