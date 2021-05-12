@@ -5,3 +5,19 @@
   align-items: center;
   flex-direction: column;
 }
+.nav-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-end;
+  align-items: center;
+  background-color: orange;
+ padding: 10px;
+}
+#nav-mobile,span{
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-end;
+}
+nav{
+  width: 100%;
+}
