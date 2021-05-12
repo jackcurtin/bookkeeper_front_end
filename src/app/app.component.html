@@ -1,7 +1,7 @@
 <nav>
   <div class="nav-wrapper">
     <a class="brand-logo" routerLink="/login">BookKeeping App</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <ul id="nav_list">
       <li><a routerLink="/books">All Books</a></li>
 
       <span *ngIf="!this.currentUser">
@@ -10,7 +10,7 @@
       </span>
       <span *ngIf="this.currentUser">
         <li><a routerLink="/logout">Log Out</a></li>
-        <li>Hello,</li>
+        <li>Hello, {{this.currentUser}}</li>
       </span>
     </ul>
   </div>
