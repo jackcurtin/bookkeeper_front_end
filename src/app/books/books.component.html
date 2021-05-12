@@ -19,15 +19,21 @@
   <input [(ngModel)]="synopsis" name="synopsis" type="text" placeholder="book synopsis" />
   <input [(ngModel)]="pageCount" name="pageCount" type="text" placeholder="page count" />
   <input [(ngModel)]="isbn" name="isbn" type="text" placeholder="isbn number" />
-  <select [(ngModel)]="authorIndex" name="selectAuthor">
-    <option *ngFor="let author of allAuthors; index as i" value={{i}}>{{author.firstName}} {{author.lastName}}</option>
+  <label>Select an author
+  <select [(ngModel)]="authorIndex" name="selectAuthor"  >
+    <option *ngFor="let author of allAuthors; index as i" value={{i}} >{{author.firstName}} {{author.lastName}}</option>
   </select>
+  </label>
+  <label>Select an genre<br>
   <select [(ngModel)]="genreIndex" name="selectGenre">
     <option *ngFor="let genre of allGenres; index as i" value={{i}}>{{genre.name}}</option>
   </select>
+  </label>
+  <label>Select an Publisher
   <select [(ngModel)]="publisherIndex" name="selectPublisher">
     <option *ngFor="let publisher of allPublishers; index as i" value={{i}}>{{publisher.name}}</option>
   </select>
+  </label>
   <input type="submit"/>
 </form>
 

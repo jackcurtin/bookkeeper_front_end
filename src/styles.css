@@ -5,3 +5,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 ul{
   list-style: none;
 }
+form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30%;
+  background-color: lightgray;
+  padding: 5%;
+  width: 100%;
+}
+input, select{
+  margin: 5%;
+}
+input:hover{
+  background-color: lightskyblue;
+}
