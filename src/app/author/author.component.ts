@@ -7,7 +7,7 @@ import {AuthorService} from '../services/author/author.service';
   styleUrls: ['./author.component.css']
 })
 export class AuthorComponent implements OnInit {
-   public authors: [] |any;
+   public authors: [] | any;
    firstName: string;
    lastName: string;
    age: number;

@@ -1,4 +1,36 @@
 <h1>Books</h1>
+
+<section>
+  <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
+  <button (click)="getBooks()">Get All Books</button>
+</section>
+
+<div *ngIf="books">
+  <h4>All Books</h4>
+  <ul>
+    <li *ngFor="let book of books">
+      {{book.title}} -- {{book.synopsis}}
+    </li>
+  </ul>
+</div>
+<h4>Create New Book</h4>
+<form (submit)="createBook()">
+  <input [(ngModel)]="title" name="title" type="text" placeholder="book title" />
+  <input [(ngModel)]="synopsis" name="synopsis" type="text" placeholder="book synopsis" />
+  <input [(ngModel)]="pageCount" name="pageCount" type="text" placeholder="page count" />
+  <input [(ngModel)]="isbn" name="isbn" type="text" placeholder="isbn number" />
+  <select [(ngModel)]="authorIndex" name="selectAuthor">
+    <option *ngFor="let author of allAuthors; index as i" value={{i}}>{{author.firstName}} {{author.lastName}}</option>
+  </select>
+  <select [(ngModel)]="genreIndex" name="selectGenre">
+    <option *ngFor="let genre of allGenres; index as i" value={{i}}>{{genre.name}}</option>
+  </select>
+  <select [(ngModel)]="publisherIndex" name="selectPublisher">
+    <option *ngFor="let publisher of allPublishers; index as i" value={{i}}>{{publisher.name}}</option>
+  </select>
+  <input type="submit"/>
+</form>
+
 <h5><a routerLink="/author">Authors</a></h5>
 <h5><a routerLink="/genre">Genres</a></h5>
 <h5><a routerLink="/publisher">Publishers</a></h5>

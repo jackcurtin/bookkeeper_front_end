@@ -10,10 +10,12 @@ import { BooksComponent } from './books/books.component';
 import { AuthorComponent } from './author/author.component';
 import { PublisherComponent } from './publisher/publisher.component';
 import { GenreComponent } from './genre/genre.component';
+import { MatSliderModule } from '@angular/material/slider';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,8 +32,11 @@ import { LogoutComponent } from './logout/logout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
