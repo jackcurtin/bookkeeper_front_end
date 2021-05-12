@@ -7,10 +7,12 @@
     <div *ngIf="publishers">
       <h4>All Publishers</h4>
       <ul>
-        <li *ngFor="let publisher of publishers">
-          {{publisher.name}} -- {{publisher.address}}
-          <p *ngFor="let pubBook of publisher.bookList">{{pubBook}}</p>
+        <div class="listing" *ngFor="let publisher of publishers">
+        <li>
+          <h2>{{publisher.name}}</h2>
+          {{publisher.address}}
         </li>
+        </div>
       </ul>
     </div>
   </section>
